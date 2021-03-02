@@ -14,9 +14,9 @@ public class Box <T extends Fruit> extends ArrayList {
         return boxWeight;
     }
 
-    public void getInfo () {
+public void getInfo () {
         try {
-            System.out.println("На корзине написано: " + this.getClass() + ". Всего фруктов: " + this.size());
+            System.out.println("На корзине написано: " + this.get(0) + ". Всего фруктов: " + this.size());
         } catch (IndexOutOfBoundsException exception) {
             System.out.println("Что-то не так с размером списка!");
         }
