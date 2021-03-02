@@ -1,15 +1,15 @@
 package ru.geek.homeworks.lesson11.generics.fruitsandboxes;
 
-public class Fruit {
+abstract public class Fruit {
 
-    private static double WEIGHT;
+    private double weight;
 
     public Fruit (double weight) {
-        this.WEIGHT = weight;
+        this.weight = weight;
     }
 
-    public static double getFruitWeight() {
-         return WEIGHT;
+    public double getFruitWeight() {
+         return weight;
     }
 
     @Override
