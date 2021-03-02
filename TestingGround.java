@@ -8,20 +8,29 @@ public class TestingGround {
 
     public static void main(String[] args) {
 
-        Box <Apple> appleBox = new Box();
+               Box <Apple> appleBox = new Box();
         Box <Orange> orangeBox = new Box();
+        Apple apple = new Apple(1);
+        Apple apple1 = new Apple(1);
+        Apple apple2 = new Apple(1);
+        Orange orange = new Orange(1.5);
+        Orange orange1 = new Orange(1.5);
+        Orange orange2 = new Orange(1.5);
 
-        appleBox.putInBox(new Apple(), 4);
-        orangeBox.putInBox(new Orange(), 4);
+        appleBox.putInBox(apple);
+        appleBox.putInBox(apple1);
+        appleBox.putInBox(apple2);
 
-        System.out.println(appleBox);
-        System.out.println(orangeBox);
+        orangeBox.putInBox(orange);
+        orangeBox.putInBox(orange1);
+        orangeBox.putInBox(orange2);
+
+        appleBox.getInfo();
 
         System.out.println(appleBox.getWeight());
         System.out.println(orangeBox.getWeight());
 
-
-        //   System.out.println(appleBox.get(0).getClass().getSimpleName());
+        appleBox.compare(orangeBox);
 
 
     }
