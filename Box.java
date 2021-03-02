@@ -7,13 +7,23 @@ public class Box <T extends Fruit> extends ArrayList {
     private ArrayList <T> box = new ArrayList<T>();
 
     public double getWeight() {
-        return this.size() * Fruit.getFruitWeight();
+        double boxWeight = 0.0;
+        for (T object : box){
+            boxWeight += object.getFruitWeight();
+        }
+        return boxWeight;
     }
 
-    public void putInBox (T object, int amount) {
-        for (int i = 0; i < amount; i++) {
-            add(object);
+    public void getInfo () {
+        try {
+            System.out.println("На корзине написано: " + this.getClass() + ". Всего фруктов: " + this.size());
+        } catch (IndexOutOfBoundsException exception) {
+            System.out.println("Что-то не так с размером списка!");
         }
+    }
+
+    public void putInBox (T object) {
+            box.add(object);
     }
 
     public boolean compare (Box <?> another) {
